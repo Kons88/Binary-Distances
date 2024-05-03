@@ -322,10 +322,19 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Pearson & Heron I Distance ########
-      if(method == "Pearson-Heron I"||method=="Pearson-Heron I"||method=="pearson-heron I"||method=="pearson-heron 1"||method==33){
+      if(method == "Pearson-Heron I"||method=="Pearson-Heron 1"||method=="pearson-heron I"||method=="pearson-heron 1"||method==33){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((((table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,1]-table(m[,i],m[,j])[2,1]*table(m[,i],m[,j])[1,2]))/sqrt((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])*(table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,1])*(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1]))))
+        }
+       }
+      }
+
+     ######## The Pearson & Heron II Distance ########
+      if(method == "Pearson-Heron II"||method=="Pearson-Heron 2"||method=="pearson-heron II"||method=="pearson-heron 2"||method==34){
+       for(i in 1:ncol(m)){
+        for(j in 1:ncol(m)){
+           dist.mat[i,j] <- 1-(cos((pi*sqrt(table(m[,i],m[,j])[2,1]*table(m[,i],m[,j])[1,2]))/((sqrt(table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,1]))+(sqrt(table(m[,i],m[,j])[2,1]*table(m[,i],m[,j])[1,2])))))
         }
        }
       }
@@ -631,6 +640,15 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-((((table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]*table(m[i,],m[j,])[1,2]))/sqrt((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2])*(table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,1])*(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1]))))
+        }
+       }
+      }
+
+     ######## The Pearson & Heron II Distance ########
+      if(method == "Pearson-Heron II"||method=="Pearson-Heron 2"||method=="pearson-heron II"||method=="pearson-heron 2"||method==34){
+       for(i in 1:nrow(m)){
+        for(j in 1:nrow(m)){
+           dist.mat[i,j] <- 1-(cos((pi*sqrt(table(m[i,],m[j,])[2,1]*table(m[i,],m[j,])[1,2]))/((sqrt(table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1]))+(sqrt(table(m[i,],m[j,])[2,1]*table(m[i,],m[j,])[1,2])))))
         }
        }
       }
