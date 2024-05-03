@@ -311,6 +311,15 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
         }
        }
       }
+
+     ######## The Pearson III Distance ########
+      if(method == "Pearson III"||method=="Pearson 3"||method=="pearson III"||method=="pearson 3"||method==32){
+       for(i in 1:ncol(m)){
+        for(j in 1:ncol(m)){
+           dist.mat[i,j] <- 1-(sqrt((((table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,1]-table(m[,i],m[,j])[2,1]*table(m[,i],m[,j])[1,2]))/((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])*(table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,1])*(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1])))/((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1])+(((table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,1]-table(m[,i],m[,j])[2,1]*table(m[,i],m[,j])[1,2]))/((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])*(table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,1])*(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1]))))))
+        }
+       }
+      }
      return(as.dist(dist.mat, diag = diag, upper = upper))
 
      } else {
@@ -595,6 +604,15 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-(sqrt((((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1])*((table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]*table(m[i,],m[j,])[1,2])^2))/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2])*(table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,1])*(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1])))/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1])+(((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1])*((table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]*table(m[i,],m[j,])[1,2])^2))/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2])*(table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,1])*(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1]))))))
+        }
+       }
+      }
+
+     ######## The Pearson III Distance ########
+      if(method == "Pearson III"||method=="Pearson 3"||method=="pearson III"||method=="pearson 3"||method==32){
+       for(i in 1:nrow(m)){
+        for(j in 1:nrow(m)){
+           dist.mat[i,j] <- 1-(sqrt((((table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]*table(m[i,],m[j,])[1,2]))/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2])*(table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,1])*(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1])))/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1])+(((table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]*table(m[i,],m[j,])[1,2]))/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2])*(table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,1])*(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1]))))))
         }
        }
       }
