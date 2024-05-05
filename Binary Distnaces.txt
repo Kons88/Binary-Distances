@@ -392,6 +392,15 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
         }
        }
       }
+
+     ######## The McEwen & Michael Distance ########
+      if(method == "McEwen-Michael"||method=="McEwen-Michae"||method=="Michael-McEwen"||method=="michael-mcewen"||method=="mcewen-michael"||method==41){
+       for(i in 1:ncol(m)){
+        for(j in 1:ncol(m)){
+           dist.mat[i,j] <- 1-((4*(table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,1]-table(m[,i],m[,j])[2,1]*table(m[,i],m[,j])[1,2]))/(((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,1])^2)+((table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,2])^2)))
+        }
+       }
+      }
      return(as.dist(dist.mat, diag = diag, upper = upper))
 
      } else {
@@ -757,6 +766,15 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]-table(m[i,],m[j,])[1,2])/(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1]))
+        }
+       }
+      }
+
+     ######## The McEwen & Michael Distance ########
+      if(method == "McEwen-Michael"||method=="McEwen-Michae"||method=="Michael-McEwen"||method=="michael-mcewen"||method=="mcewen-michael"||method==41){
+       for(i in 1:nrow(m)){
+        for(j in 1:nrow(m)){
+           dist.mat[i,j] <- 1-((4*(table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]*table(m[i,],m[j,])[1,2]))/(((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,1])^2)+((table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2])^2)))
         }
        }
       }
