@@ -428,6 +428,15 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
         }
        }
       }
+
+     ######## The Baroni-Urbani & Buser II Distance ########
+      if(method == "Baroni-Urbani-Buser II"||method=="baroni-urbani-buser II"||method=="Baroni-Urbani-Buser 2"||method=="baroni-urbani-buser 2"||method==45){
+       for(i in 1:ncol(m)){
+        for(j in 1:ncol(m)){
+           dist.mat[i,j] <- 1-((sqrt(table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,1])+table(m[,i],m[,j])[2,2]-table(m[,i],m[,j])[2,1]-table(m[,i],m[,j])[1,2])/(sqrt(table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,1])+table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,2]))
+        }
+       }
+      }
      return(as.dist(dist.mat, diag = diag, upper = upper))
 
      } else {
@@ -829,6 +838,15 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-((sqrt(table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1])+table(m[i,],m[j,])[2,2])/(sqrt(table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1])+table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2]))
+        }
+       }
+      }
+
+     ######## The Baroni-Urbani & Buser II Distance ########
+      if(method == "Baroni-Urbani-Buser II"||method=="baroni-urbani-buser II"||method=="Baroni-Urbani-Buser 2"||method=="baroni-urbani-buser 2"||method==45){
+       for(i in 1:nrow(m)){
+        for(j in 1:nrow(m)){
+           dist.mat[i,j] <- 1-((sqrt(table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1])+table(m[i,],m[j,])[2,2]-table(m[i,],m[j,])[2,1]-table(m[i,],m[j,])[1,2])/(sqrt(table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1])+table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2]))
         }
        }
       }
