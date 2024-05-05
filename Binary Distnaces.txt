@@ -442,7 +442,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       if(method == "Peirce"||method=="Peirc"||method=="Peir"||method=="Pei"||method=="peirce"||method==46){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
-           dist.mat[i,j] <- 1-((table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,1]-table(m[,i],m[,j])[2,1]*table(m[,i],m[,j])[1,2])/((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1])))
+           dist.mat[i,j] <- 1-((table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,1]-table(m[,i],m[,j])[2,1]-table(m[,i],m[,j])[1,2])/((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1])))
         }
        }
       }
@@ -864,7 +864,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       if(method == "Peirce"||method=="Peirc"||method=="Peir"||method=="Pei"||method=="peirce"||method==46){
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
-           dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]*table(m[i,],m[j,])[1,2])/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1])))
+           dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]-table(m[i,],m[j,])[1,2])/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1])))
         }
        }
       }
