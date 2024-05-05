@@ -383,6 +383,15 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
         }
        }
       }
+
+     ######## The Hamann Distance ########
+      if(method == "Hamann"||method=="Haman"||method=="Hama"||method=="Ham"||method=="hamann"||method=="haman"||method=="hama"||method=="ham"||method==40){
+       for(i in 1:ncol(m)){
+        for(j in 1:ncol(m)){
+           dist.mat[i,j] <- 1-((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,1]-table(m[,i],m[,j])[2,1]-table(m[,i],m[,j])[1,2])/(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1]))
+        }
+       }
+      }
      return(as.dist(dist.mat, diag = diag, upper = upper))
 
      } else {
@@ -739,6 +748,15 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]*table(m[i,],m[j,])[1,2])/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1])^2))
+        }
+       }
+      }
+
+     ######## The Hamann Distance ########
+      if(method == "Hamann"||method=="Haman"||method=="Hama"||method=="Ham"||method=="hamann"||method=="haman"||method=="hama"||method=="ham"||method==40){
+       for(i in 1:nrow(m)){
+        for(j in 1:nrow(m)){
+           dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]-table(m[i,],m[j,])[1,2])/(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1]))
         }
        }
       }
