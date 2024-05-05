@@ -455,6 +455,15 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
         }
        }
       }
+
+     ######## The Tarantula Distance ########
+      if(method == "Tarantula"||method=="Tarantul"||method=="Tarantu"||method=="Tarant"||method=="tarantula"||method==48){
+       for(i in 1:ncol(m)){
+        for(j in 1:ncol(m)){
+           dist.mat[i,j] <- 1-(((table(m[,i],m[,j])[2,2])/(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]))/(((table(m[,i],m[,j])[2,2])/(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]))+((table(m[,i],m[,j])[1,2])/(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1]))))
+        }
+       }
+      }
      return(as.dist(dist.mat, diag = diag, upper = upper))
 
      } else {
@@ -883,6 +892,15 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2]-(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2]))/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2])*(table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,1])*(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1])))
+        }
+       }
+      }
+
+     ######## The Tarantula Distance ########
+      if(method == "Tarantula"||method=="Tarantul"||method=="Tarantu"||method=="Tarant"||method=="tarantula"||method==48){
+       for(i in 1:nrow(m)){
+        for(j in 1:nrow(m)){
+           dist.mat[i,j] <- 1-(((table(m[i,],m[j,])[2,2])/(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]))/(((table(m[i,],m[j,])[2,2])/(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]))+((table(m[i,],m[j,])[1,2])/(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1]))))
         }
        }
       }
