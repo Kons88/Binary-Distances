@@ -13,8 +13,19 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
   ##----------------------------------------------------------------------------------
   ## m is a binary matrix, or a data-frame of 0s and 1s.
   ##
-  ## The method argument takes the values "jaccard", "simple", "rogers-tanimoto"
-  ## "anderberg-sokal-sneath", "sokal-sneath" and "gower-legendre". 
+  ## The method argument takes the values: 
+  ## "jaccard" (or "tanimoto"), "sorensen-dice (or "czekanowski", or "nei-li"), 
+  ## "3w-jaccard","simple matching" (or "sokal-michener"), "sokal-sneath 1", 
+  ## "sokal-sneath 2", "sokal-sneath 3", "sokal-sneath 4", "sokal-sneath 5" 
+  ## (or "ochiai 2"), "rogers-tanimoto", "faith", "gower-legendre", "russel-rao",
+  ## "ochiai 1" (or "cosine", or "otsuka-ochiai", or "fowlkes-mallows index"),
+  ## "forbes 1", "forbes 2", "fossum", "sorgenfrei", "mountford", "mcconnaughey",
+  ## "tarwid", "kulczynski 1", "kulczynski 2" (or "driver-kroeber"), "johnson",
+  ## "dennis", "simpson" (or "szymkiewicz-simpson"), "braun-blanquet", "fager-mcgowan",
+  ## "gower", "pearson 1", "pearson 2", "pearson 3", "pearson-heron 1", "pearson-heron 2"
+  ## "cole", "stiles", "yule's q", "yule's w" (or "yule's y"), "dispersion", "hamann",
+  ## "mcewen-michael", "goodman-kruskal lambda", "anderberg", "baroni-urbani-buser 1",
+  ## "baroni-urbani-buser 2", "peirce", "eyraud" and "tarantula". 
   ## Its default value is "jaccard".
   ##
   ## row.dist represents the way one needs to calculate the distances. If it is
