@@ -45,7 +45,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
      rownames(dist.mat) <- colnames(m)
   
      ######## The Jaccard (or Tanimoto) Distance ########
-      if(method == "jaccard"||method=="jaccar"||method=="jacca"||method=="jacc"||method=="jac"||method=="tanimoto"||method=="tanimot"||method=="tanimo"||method=="tanim"||method=="tani"||method=="tan"||method=="ta"||method==1){
+      if(method == "Jaccard" || method == "Jaccar" || method == "Jacca" || method == "Jacc" || method == "Jac" || method == "Tanimoto" || method == "Tanimot" || method == "Tanimo" || method == "Tanim" || method == "Tani" || method == "Tan" || method == "Ta"||method == "jaccard"||method=="jaccar"||method=="jacca"||method=="jacc"||method=="jac"||method=="tanimoto"||method=="tanimot"||method=="tanimo"||method=="tanim"||method=="tani"||method=="tan"||method=="ta"||method==1){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-(table(m[,i],m[,j])[2,2]/(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[2,2]))
@@ -54,7 +54,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Sorensen-Dice (or Czekanowski or Nei & Li) Distance ########
-      if(method=="sd"||method=="dice"||method=="dic"||method=="czekanowski"||method=="czekanowsk"||method=="czekanows"||method=="czekanow"||method=="czekano"||method=="czekan"||method=="czeka"||method=="czek"||method=="cze"||method=="nei-li"||method=="nei-l"||method=="nei-"||method=="nl"||method==2){
+      if(method == "SD"||method == "Sorensen-Dice"||method == "Sorensen-Dic"||method == "Sorensen-Di"||method == "Sorensen-Di"||method == "Sorensen-D"||method == "Sorensen-"||method == "Sorensen"||method == "Sorense"||method == "Sorens"||method == "Soren"||method == "Dice"||method == "Dic"||method == "Czekanowski"||method == "Czekanowsk"||method == "Czekanows"||method == "Czekanow"||method == "Czekano"||method == "Czekan"||method == "Czeka"||method == "Czek"||method == "Cze"||method == "Nei-Li"||method == "Nei-L"||method == "Nei-"||method == "NL"||method=="sd"||method=="sorensen-dice"||method=="sorensen-dic"||method=="sorensen-di"||method=="sorensen-di"||method=="sorensen-d"||method=="sorensen-"||method=="sorensen"||method=="sorense"||method=="sorens"||method=="soren"||method=="dice"||method=="dic"||method=="czekanowski"||method=="czekanowsk"||method=="czekanows"||method=="czekanow"||method=="czekano"||method=="czekan"||method=="czeka"||method=="czek"||method=="cze"||method=="nei-li"||method=="nei-l"||method=="nei-"||method=="nl"||method==2){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((2*table(m[,i],m[,j])[2,2])/(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[2,1]+2*table(m[,i],m[,j])[2,2]))
@@ -485,7 +485,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       rownames(dist.mat) <- rownames(m)
   
      ######## The Jaccard (or Tanimoto) Distance ########
-      if(method == "jaccard"||method=="jaccar"||method=="jacca"||method=="jacc"||method=="jac"||method=="tanimoto"||method=="tanimot"||method=="tanimo"||method=="tanim"||method=="tani"||method=="tan"||method=="ta"||method==1){
+      if(method == "Jaccard" || method == "Jaccar" || method == "Jacca" || method == "Jacc" || method == "Jac" || method == "Tanimoto" || method == "Tanimot" || method == "Tanimo" || method == "Tanim" || method == "Tani" || method == "Tan" || method == "Ta"||method == "jaccard"||method=="jaccar"||method=="jacca"||method=="jacc"||method=="jac"||method=="tanimoto"||method=="tanimot"||method=="tanimo"||method=="tanim"||method=="tani"||method=="tan"||method=="ta"||method==1){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-(table(m[i,],m[j,])[2,2]/(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[2,2]))
@@ -494,7 +494,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
       
      ######## The Sorensen-Dice (or Czekanowski or Nei & Li) Distance ########
-      if(method=="sd"||method=="dice"||method=="dic"||method=="czekanowski"||method=="czekanowsk"||method=="czekanows"||method=="czekanow"||method=="czekano"||method=="czekan"||method=="czeka"||method=="czek"||method=="cze"||method=="nei-li"||method=="nei-l"||method=="nei-"||method=="nl"||method==2){
+      if(method == "SD"||method == "Sorensen-Dice"||method == "Sorensen-Dic"||method == "Sorensen-Di"||method == "Sorensen-Di"||method == "Sorensen-D"||method == "Sorensen-"||method == "Sorensen"||method == "Sorense"||method == "Sorens"||method == "Soren"||method == "Dice"||method == "Dic"||method == "Czekanowski"||method == "Czekanowsk"||method == "Czekanows"||method == "Czekanow"||method == "Czekano"||method == "Czekan"||method == "Czeka"||method == "Czek"||method == "Cze"||method == "Nei-Li"||method == "Nei-L"||method == "Nei-"||method == "NL"||method=="sd"||method=="sorensen-dice"||method=="sorensen-dic"||method=="sorensen-di"||method=="sorensen-di"||method=="sorensen-d"||method=="sorensen-"||method=="sorensen"||method=="sorense"||method=="sorens"||method=="soren"||method=="dice"||method=="dic"||method=="czekanowski"||method=="czekanowsk"||method=="czekanows"||method=="czekanow"||method=="czekano"||method=="czekan"||method=="czeka"||method=="czek"||method=="cze"||method=="nei-li"||method=="nei-l"||method=="nei-"||method=="nl"||method==2){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-((2*table(m[i,],m[j,])[2,2])/(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[2,1]+2*table(m[i,],m[j,])[2,2]))
