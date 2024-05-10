@@ -63,8 +63,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The 3W-Jaccard Distance ########
-      if(method == "3W-Jaccard"||method == "3W-Jaccar"||method == "3W-Jacca"||method == "3W-Jacc"||method == "3W-Jac"||method == "3W-Ja"||method == "3W-J"||method=="3W"||method=="3WJaccard"||method=="3WJaccar"||method=="3WJacca"||method=="3WJacc"||method=="3WJ"
-||method == "3w-jaccard"||method == "3w-jaccar"||method == "3w-jacca"||method == "3w-jacc"||method == "3w-jac"||method == "3w-ja"||method == "3w-j"||method=="3w"||method=="3wjaccard"||method=="3wjaccar"||method=="3wjacca"||method=="3wjacc"||method=="3wj"||method==3){
+      if(method == "3W-Jaccard"||method == "3W-Jaccar"||method == "3W-Jacca"||method == "3W-Jacc"||method == "3W-Jac"||method == "3W-Ja"||method == "3W-J"||method=="3W"||method=="3WJaccard"||method=="3WJaccar"||method=="3WJacca"||method=="3WJacc"||method=="3WJ"||method == "3w-jaccard"||method == "3w-jaccar"||method == "3w-jacca"||method == "3w-jacc"||method == "3w-jac"||method == "3w-ja"||method == "3w-j"||method=="3w"||method=="3wjaccard"||method=="3wjaccar"||method=="3wjacca"||method=="3wjacc"||method=="3wj"||method==3){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((3*table(m[,i],m[,j])[2,2])/(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[2,1]+3*table(m[,i],m[,j])[2,2]))
@@ -504,8 +503,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
      ######## The 3W-Jaccard Distance ########
-      if(method == "3W-Jaccard"||method == "3W-Jaccar"||method == "3W-Jacca"||method == "3W-Jacc"||method == "3W-Jac"||method == "3W-Ja"||method == "3W-J"||method=="3W"||method=="3WJaccard"||method=="3WJaccar"||method=="3WJacca"||method=="3WJacc"||method=="3WJ"
-||method == "3w-jaccard"||method == "3w-jaccar"||method == "3w-jacca"||method == "3w-jacc"||method == "3w-jac"||method == "3w-ja"||method == "3w-j"||method=="3w"||method=="3wjaccard"||method=="3wjaccar"||method=="3wjacca"||method=="3wjacc"||method=="3wj"||method==3){
+      if(method == "3W-Jaccard"||method == "3W-Jaccar"||method == "3W-Jacca"||method == "3W-Jacc"||method == "3W-Jac"||method == "3W-Ja"||method == "3W-J"||method=="3W"||method=="3WJaccard"||method=="3WJaccar"||method=="3WJacca"||method=="3WJacc"||method=="3WJ"||method == "3w-jaccard"||method == "3w-jaccar"||method == "3w-jacca"||method == "3w-jacc"||method == "3w-jac"||method == "3w-ja"||method == "3w-j"||method=="3w"||method=="3wjaccard"||method=="3wjaccar"||method=="3wjacca"||method=="3wjacc"||method=="3wj"||method==3){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-((3*table(m[i,],m[j,])[2,2])/(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[2,1]+3*table(m[i,],m[j,])[2,2]))
