@@ -90,7 +90,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Sokal & Sneath II Distance ########
-      if(method == "Sokal-Sneath 2"||method=="Sokal-Sneat 2"||method=="Sokal-Snea 2"||method=="Sokal-Sne 2"||method=="Sokal-Sn 2"||method=="Sokal-S 2"||method=="SS2"||method=="SS 2"||method=="Sokal-Sneath II"||method=="Sokal-Sneat II"||method=="Sokal-Snea II"||method=="Sokal-Sne II"||method=="Sokal-Sn II"||method=="Sokal-S II"||method=="SSii"||method=="SS II"||method == "sokal-sneath 2"||method=="sokal-sneat 2"||method=="sokal-snea 2"||method=="sokal-sne 2"||method=="sokal-sn 2"||method=="sokal-s 2"||method=="ss2"||method=="ss 2"||method=="sokal-sneath ii"||method=="sokal-sneat ii"||method=="sokal-snea ii"||method=="sokal-sne ii"||method=="sokal-sn ii"||method=="sokal-s ii"||method=="ssii"||method=="ss ii"||method==6){
+      if(method == "Sokal-Sneath 2"||method=="Sokal-Sneat 2"||method=="Sokal-Snea 2"||method=="Sokal-Sne 2"||method=="Sokal-Sn 2"||method=="Sokal-S 2"||method=="SS2"||method=="SS 2"||method=="Sokal-Sneath II"||method=="Sokal-Sneat II"||method=="Sokal-Snea II"||method=="Sokal-Sne II"||method=="Sokal-Sn II"||method=="Sokal-S II"||method=="SSII"||method=="SS II"||method == "sokal-sneath 2"||method=="sokal-sneat 2"||method=="sokal-snea 2"||method=="sokal-sne 2"||method=="sokal-sn 2"||method=="sokal-s 2"||method=="ss2"||method=="ss 2"||method=="sokal-sneath ii"||method=="sokal-sneat ii"||method=="sokal-snea ii"||method=="sokal-sne ii"||method=="sokal-sn ii"||method=="sokal-s ii"||method=="ssii"||method=="ss ii"||method==6){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((2*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,1]))/(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[2,1]+2*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,1])))
@@ -99,7 +99,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Sokal & Sneath III Distance ########
-      if(method == "sokal-sneath 3"||method=="sokal-sneat 3"||method=="sokal-snea 3"||method=="sokal-sne 3"||method=="sokal-sn 3"||method=="sokal-s 3"||method=="ss3"||method=="ss 3"||method=="sokal-sneath III"||method=="sokal-sneath III"||method=="sokal-sneat III"||method=="sokal-snea III"||method=="sokal-sne III"||method=="sokal-sn III"||method=="sokal-s III"||method=="ssiii"||method=="ss iii"||method==7){
+      if(method == "Sokal-Sneath 3"||method=="Sokal-Sneat 3"||method=="Sokal-Snea 3"||method=="Sokal-Sne 3"||method=="Sokal-Sn 3"||method=="Sokal-S 3"||method=="SS3"||method=="SS 3"||method=="Sokal-Sneath III"||method=="Sokal-Sneat III"||method=="Sokal-Snea III"||method=="Sokal-Sne III"||method=="Sokal-Sn III"||method=="Sokal-S III"||method=="SSIII"||method=="SS III"||method == "sokal-sneath 3"||method=="sokal-sneat 3"||method=="sokal-snea 3"||method=="sokal-sne 3"||method=="sokal-sn 3"||method=="sokal-s 3"||method=="ss3"||method=="ss 3"||method=="sokal-sneath iii"||method=="sokal-sneat iii"||method=="sokal-snea iii"||method=="sokal-sne iii"||method=="sokal-sn iii"||method=="sokal-s iii"||method=="ssiii"||method=="ss iii"||method==7){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,1])/(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[2,1]))
@@ -530,7 +530,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
      ######## The Sokal & Sneath II Distance ########
-      if(method == "Sokal-Sneath 2"||method=="Sokal-Sneat 2"||method=="Sokal-Snea 2"||method=="Sokal-Sne 2"||method=="Sokal-Sn 2"||method=="Sokal-S 2"||method=="SS2"||method=="SS 2"||method=="Sokal-Sneath II"||method=="Sokal-Sneat II"||method=="Sokal-Snea II"||method=="Sokal-Sne II"||method=="Sokal-Sn II"||method=="Sokal-S II"||method=="SSii"||method=="SS II"||method == "sokal-sneath 2"||method=="sokal-sneat 2"||method=="sokal-snea 2"||method=="sokal-sne 2"||method=="sokal-sn 2"||method=="sokal-s 2"||method=="ss2"||method=="ss 2"||method=="sokal-sneath ii"||method=="sokal-sneat ii"||method=="sokal-snea ii"||method=="sokal-sne ii"||method=="sokal-sn ii"||method=="sokal-s ii"||method=="ssii"||method=="ss ii"||method==6){
+      if(method == "Sokal-Sneath 2"||method=="Sokal-Sneat 2"||method=="Sokal-Snea 2"||method=="Sokal-Sne 2"||method=="Sokal-Sn 2"||method=="Sokal-S 2"||method=="SS2"||method=="SS 2"||method=="Sokal-Sneath II"||method=="Sokal-Sneat II"||method=="Sokal-Snea II"||method=="Sokal-Sne II"||method=="Sokal-Sn II"||method=="Sokal-S II"||method=="SSII"||method=="SS II"||method == "sokal-sneath 2"||method=="sokal-sneat 2"||method=="sokal-snea 2"||method=="sokal-sne 2"||method=="sokal-sn 2"||method=="sokal-s 2"||method=="ss2"||method=="ss 2"||method=="sokal-sneath ii"||method=="sokal-sneat ii"||method=="sokal-snea ii"||method=="sokal-sne ii"||method=="sokal-sn ii"||method=="sokal-s ii"||method=="ssii"||method=="ss ii"||method==6){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-((2*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,1]))/(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[2,1]+2*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,1])))
@@ -539,7 +539,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
      ######## The Sokal & Sneath III Distance ########
-      if(method == "sokal-sneath 3"||method=="sokal-sneat 3"||method=="sokal-snea 3"||method=="sokal-sne 3"||method=="sokal-sn 3"||method=="sokal-s 3"||method=="ss3"||method=="ss 3"||method=="sokal-sneath III"||method=="sokal-sneath III"||method=="sokal-sneat III"||method=="sokal-snea III"||method=="sokal-sne III"||method=="sokal-sn III"||method=="sokal-s III"||method=="ssiii"||method=="ss iii"||method==7){
+      if(method == "Sokal-Sneath 3"||method=="Sokal-Sneat 3"||method=="Sokal-Snea 3"||method=="Sokal-Sne 3"||method=="Sokal-Sn 3"||method=="Sokal-S 3"||method=="SS3"||method=="SS 3"||method=="Sokal-Sneath III"||method=="Sokal-Sneat III"||method=="Sokal-Snea III"||method=="Sokal-Sne III"||method=="Sokal-Sn III"||method=="Sokal-S III"||method=="SSIII"||method=="SS III"||method == "sokal-sneath 3"||method=="sokal-sneat 3"||method=="sokal-snea 3"||method=="sokal-sne 3"||method=="sokal-sn 3"||method=="sokal-s 3"||method=="ss3"||method=="ss 3"||method=="sokal-sneath iii"||method=="sokal-sneat iii"||method=="sokal-snea iii"||method=="sokal-sne iii"||method=="sokal-sn iii"||method=="sokal-s iii"||method=="ssiii"||method=="ss iii"||method==7){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,1])/(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[2,1]))
