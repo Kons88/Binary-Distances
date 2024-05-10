@@ -108,7 +108,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Sokal & Sneath IV Distance ########
-      if(method == "sokal-sneath 4"||method=="sokal-sneat 4"||method=="sokal-snea 4"||method=="sokal-sne 4"||method=="sokal-sn 4"||method=="sokal-s 4"||method=="ss4"||method=="ss 4"||method=="sokal-sneath IV"||method=="sokal-sneat IV"||method=="sokal-snea IV"||method=="sokal-sne IV"||method=="sokal-sn IV"||method=="sokal-s IV"||method=="ssiv"||method=="ss iv"||method==8){
+      if(method == "Sokal-Sneath 4"||method=="Sokal-Sneat 4"||method=="Sokal-Snea 4"||method=="Sokal-Sne 4"||method=="Sokal-Sn 4"||method=="Sokal-S 4"||method=="SS4"||method=="SS 4"||method=="Sokal-Sneath IV"||method=="Sokal-Sneat IV"||method=="Sokal-Snea IV"||method=="Sokal-Sne IV"||method=="Sokal-Sn IV"||method=="Sokal-S IV"||method=="SSIV"||method=="SS IV"||method == "sokal-sneath 4"||method=="sokal-sneat 4"||method=="sokal-snea 4"||method=="sokal-sne 4"||method=="sokal-sn 4"||method=="sokal-s 4"||method=="ss4"||method=="ss 4"||method=="sokal-sneath iv"||method=="sokal-sneat iv"||method=="sokal-snea iv"||method=="sokal-sne iv"||method=="sokal-sn iv"||method=="sokal-s iv"||method=="ssiv"||method=="ss iv"||method==8){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-(0.25*(table(m[,i],m[,j])[2,2]/(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])+table(m[,i],m[,j])[2,2]/(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])+table(m[,i],m[,j])[1,1]/(table(m[,i],m[,j])[1,1]+table(m[,i],m[,j])[2,1])+table(m[,i],m[,j])[1,1]/(table(m[,i],m[,j])[1,1]+table(m[,i],m[,j])[1,2])))
@@ -548,7 +548,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
      ######## The Sokal & Sneath IV Distance ########
-      if(method == "sokal-sneath 4"||method=="sokal-sneat 4"||method=="sokal-snea 4"||method=="sokal-sne 4"||method=="sokal-sn 4"||method=="sokal-s 4"||method=="ss4"||method=="ss 4"||method=="sokal-sneath IV"||method=="sokal-sneat IV"||method=="sokal-snea IV"||method=="sokal-sne IV"||method=="sokal-sn IV"||method=="sokal-s IV"||method=="ssiv"||method=="ss iv"||method==8){
+      if(method == "Sokal-Sneath 4"||method=="Sokal-Sneat 4"||method=="Sokal-Snea 4"||method=="Sokal-Sne 4"||method=="Sokal-Sn 4"||method=="Sokal-S 4"||method=="SS4"||method=="SS 4"||method=="Sokal-Sneath IV"||method=="Sokal-Sneat IV"||method=="Sokal-Snea IV"||method=="Sokal-Sne IV"||method=="Sokal-Sn IV"||method=="Sokal-S IV"||method=="SSIV"||method=="SS IV"||method == "sokal-sneath 4"||method=="sokal-sneat 4"||method=="sokal-snea 4"||method=="sokal-sne 4"||method=="sokal-sn 4"||method=="sokal-s 4"||method=="ss4"||method=="ss 4"||method=="sokal-sneath iv"||method=="sokal-sneat iv"||method=="sokal-snea iv"||method=="sokal-sne iv"||method=="sokal-sn iv"||method=="sokal-s iv"||method=="ssiv"||method=="ss iv"||method==8){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-(0.25*(table(m[i,],m[j,])[2,2]/(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])+table(m[i,],m[j,])[2,2]/(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2])+table(m[i,],m[j,])[1,1]/(table(m[i,],m[j,])[1,1]+table(m[i,],m[j,])[2,1])+table(m[i,],m[j,])[1,1]/(table(m[i,],m[j,])[1,1]+table(m[i,],m[j,])[1,2])))
