@@ -116,8 +116,8 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
       }
 
-     ######## The Sokal & Sneath V Distance ########
-      if(method == "sokal-sneath 5"||method=="sokal-sneat 5"||method=="sokal-snea 5"||method=="sokal-sne 5"||method=="sokal-sn 5"||method=="sokal-s 5"||method=="ss5"||method=="ss 5"||method=="sokal-sneath V"||method=="sokal-sneat V"||method=="sokal-snea V"||method=="sokal-sne V"||method=="sokal-sn V"||method=="sokal-s V"||method=="ssv"||method=="ss v"||method=="ochiai II"||method=="ochia II"||method=="ochi II"||method=="och II"||method=="oc II"||method=="o II"||method=="o2"||method=="o 2"||method=="oii"||method=="o ii"||method==9){
+     ######## The Sokal & Sneath V (or Ochiai 2) Distance ########
+      if(method == "Sokal-Sneath 5"||method=="Sokal-Sneat 5"||method=="Sokal-Snea 5"||method=="Sokal-Sne 5"||method=="Sokal-Sn 5"||method=="Sokal-S 5"||method=="SS5"||method=="SS 5"||method=="Sokal-Sneath V"||method=="Sokal-Sneat V"||method=="Sokal-Snea V"||method=="Sokal-Sne V"||method=="Sokal-Sn V"||method=="Sokal-S V"||method=="SSv"||method=="SS V"||method=="Ochiai II"||method=="Ochia II"||method=="Ochi II"||method=="Och II"||method=="Oc II"||method=="O II"||method=="O2"||method=="O 2"||method=="OII"||method=="O II"||method == "sokal-sneath 5"||method=="sokal-sneat 5"||method=="sokal-snea 5"||method=="sokal-sne 5"||method=="sokal-sn 5"||method=="sokal-s 5"||method=="ss5"||method=="ss 5"||method=="sokal-sneath v"||method=="sokal-sneat v"||method=="sokal-snea v"||method=="sokal-sne v"||method=="sokal-sn v"||method=="sokal-s v"||method=="ssv"||method=="ss v"||method=="ochiai ii"||method=="ochia ii"||method=="ochi ii"||method=="och ii"||method=="oc ii"||method=="o ii"||method=="o2"||method=="o 2"||method=="oii"||method=="o ii"||method==9){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,1])/(sqrt(((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])*(table(m[,i],m[,j])[1,1]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[1,1]+table(m[,i],m[,j])[1,2])))))
@@ -556,8 +556,8 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
         }
        }
 
-     ######## The Sokal & Sneath V Distance ########
-      if(method == "sokal-sneath 5"||method=="sokal-sneat 5"||method=="sokal-snea 5"||method=="sokal-sne 5"||method=="sokal-sn 5"||method=="sokal-s 5"||method=="ss5"||method=="ss 5"||method=="sokal-sneath V"||method=="sokal-sneat V"||method=="sokal-snea V"||method=="sokal-sne V"||method=="sokal-sn V"||method=="sokal-s V"||method=="ssv"||method=="ss v"||method=="ochiai II"||method=="ochia II"||method=="ochi II"||method=="och II"||method=="oc II"||method=="o II"||method=="o2"||method=="o 2"||method=="oii"||method=="o ii"||method==9){
+     ######## The Sokal & Sneath V (or Ochiai 2) Distance ########
+      if(method == "Sokal-Sneath 5"||method=="Sokal-Sneat 5"||method=="Sokal-Snea 5"||method=="Sokal-Sne 5"||method=="Sokal-Sn 5"||method=="Sokal-S 5"||method=="SS5"||method=="SS 5"||method=="Sokal-Sneath V"||method=="Sokal-Sneat V"||method=="Sokal-Snea V"||method=="Sokal-Sne V"||method=="Sokal-Sn V"||method=="Sokal-S V"||method=="SSv"||method=="SS V"||method=="Ochiai II"||method=="Ochia II"||method=="Ochi II"||method=="Och II"||method=="Oc II"||method=="O II"||method=="O2"||method=="O 2"||method=="OII"||method=="O II"||method == "sokal-sneath 5"||method=="sokal-sneat 5"||method=="sokal-snea 5"||method=="sokal-sne 5"||method=="sokal-sn 5"||method=="sokal-s 5"||method=="ss5"||method=="ss 5"||method=="sokal-sneath v"||method=="sokal-sneat v"||method=="sokal-snea v"||method=="sokal-sne v"||method=="sokal-sn v"||method=="sokal-s v"||method=="ssv"||method=="ss v"||method=="ochiai ii"||method=="ochia ii"||method=="ochi ii"||method=="och ii"||method=="oc ii"||method=="o ii"||method=="o2"||method=="o 2"||method=="oii"||method=="o ii"||method==9){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1])/(sqrt(((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2])*(table(m[i,],m[j,])[1,1]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[1,1]+table(m[i,],m[j,])[1,2])))))
