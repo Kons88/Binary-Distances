@@ -127,7 +127,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Rogers & Tanimoto Distance ########
-      if(method == "rogers-tanimoto"||method=="rogers-tanimot"||method=="rogers-tanimo"||method=="rogers-tanim"||method=="rogers-tani"||method=="rogers-tan"||method=="rogers-ta"||method=="rogers-t"||method=="rogers-"||method=="roger"||method=="roge"||method=="rog"||method=="rt"||method==10){
+      if(method == "Rogers-Tanimoto"||method=="Rogers-Tanimot"||method=="Rogers-Tanimo"||method=="Rogers-Tanim"||method=="Rogers-Tani"||method=="Rogers-Tan"||method=="Rogers-Ta"||method=="Rogers-T"||method=="Rogers-"||method=="Roger"||method=="Roge"||method=="Rog"||method=="RT"||method == "rogers-tanimoto"||method=="rogers-tanimot"||method=="rogers-tanimo"||method=="rogers-tanim"||method=="rogers-tani"||method=="rogers-tan"||method=="rogers-ta"||method=="rogers-t"||method=="rogers-"||method=="roger"||method=="roge"||method=="rog"||method=="rt"||method==10){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,1])/(2*(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[2,1])+table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,1]))
@@ -567,7 +567,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
      ######## The Rogers & Tanimoto Distance ########
-      if(method == "rogers-tanimoto"||method=="rogers-tanimot"||method=="rogers-tanimo"||method=="rogers-tanim"||method=="rogers-tani"||method=="rogers-tan"||method=="rogers-ta"||method=="rogers-t"||method=="rogers-"||method=="roger"||method=="roge"||method=="rog"||method=="rt"||method==10){
+      if(method == "Rogers-Tanimoto"||method=="Rogers-Tanimot"||method=="Rogers-Tanimo"||method=="Rogers-Tanim"||method=="Rogers-Tani"||method=="Rogers-Tan"||method=="Rogers-Ta"||method=="Rogers-T"||method=="Rogers-"||method=="Roger"||method=="Roge"||method=="Rog"||method=="RT"||method == "rogers-tanimoto"||method=="rogers-tanimot"||method=="rogers-tanimo"||method=="rogers-tanim"||method=="rogers-tani"||method=="rogers-tan"||method=="rogers-ta"||method=="rogers-t"||method=="rogers-"||method=="roger"||method=="roge"||method=="rog"||method=="rt"||method==10){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,1])/(2*(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[2,1])+table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,1]))
