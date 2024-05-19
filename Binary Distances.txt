@@ -136,7 +136,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Faith Distance ########
-      if(method == "faith"||method=="fait"||method=="fai"||method=="fa"||method=="f"||method==11){
+      if(method == "Faith"||method=="Fait"||method=="Fai"||method=="Fa"||method=="F"||method == "faith"||method=="fait"||method=="fai"||method=="fa"||method=="f"||method==11){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((table(m[,i],m[,j])[2,2]+0.5*table(m[,i],m[,j])[1,1])/(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,1]))
@@ -576,7 +576,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
      ######## The Faith Distance ########
-      if(method == "faith"||method=="fait"||method=="fai"||method=="fa"||method=="f"||method==11){
+      if(method == "Faith"||method=="Fait"||method=="Fai"||method=="Fa"||method=="F"||method == "faith"||method=="fait"||method=="fai"||method=="fa"||method=="f"||method==11){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2]+0.5*table(m[i,],m[j,])[1,1])/(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,1]))
