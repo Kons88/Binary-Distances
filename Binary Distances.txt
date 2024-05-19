@@ -172,7 +172,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Forbes I Distance ########
-      if(method == "Forbes I"||method=="forbes I"||method=="f1"||method=="fi"||method==15){
+      if(method=="Forbes I"||method=="Forbe I"||method=="Forb I"||method=="For I"||method=="Forbes 1"||method=="Forbe 1"||method=="Forb 1"||method=="For 1"||method=="F1"||method=="FI"||method=="F 1"||method=="F I"||method=="forbes i"||method=="forbe i"||method=="forb i"||method=="for i"||method=="forbes 1"||method=="forbe 1"||method=="forb 1"||method=="for 1"||method=="f1"||method=="fi"||method=="f 1"||method=="f i"||method==15){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-(((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1])*(table(m[,i],m[,j])[2,2]))/((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])))
@@ -181,7 +181,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Forbes II Distance ########
-      if(method == "Forbes II"||method=="forbes II"||method=="f2"||method=="fii"||method==16){
+      if(method == "forbes 2"||method=="forbes ii"||method=="f2"||method=="fii"||method=="f 2"||method=="f ii"||method==16){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-(((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1])*(table(m[,i],m[,j])[2,2])-((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])))/((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1])*(min((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]),(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2]))-(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2]))))
@@ -612,7 +612,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
      ######## The Forbes I Distance ########
-      if(method == "Forbes I"||method=="forbes I"||method=="f1"||method=="fi"||method==15){
+      if(method=="Forbes I"||method=="Forbe I"||method=="Forb I"||method=="For I"||method=="Forbes 1"||method=="Forbe 1"||method=="Forb 1"||method=="For 1"||method=="F1"||method=="FI"||method=="F 1"||method=="F I"||method=="forbes i"||method=="forbe i"||method=="forb i"||method=="for i"||method=="forbes 1"||method=="forbe 1"||method=="forb 1"||method=="for 1"||method=="f1"||method=="fi"||method=="f 1"||method=="f i"||method==15){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-(((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,1])*(table(m[i,],m[j,])[2,2]))/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2])))
