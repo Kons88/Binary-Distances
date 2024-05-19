@@ -145,7 +145,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Gower & Legendre Distance ########
-      if(method == "gower-legendre"||method=="gower-legendr"||method=="gower-legend"||method=="gower-legen"||method=="gower-lege"||method=="gower-leg"||method=="gower-le"||method=="gower-l"||method=="gower-"||method=="gower"||method=="gowe"||method=="gow"||method=="gl"||method==12){
+      if(method == "Gower-Legendre"||method=="Gower-Legendr"||method=="Gower-Legend"||method=="Gower-Legen"||method=="Gower-Lege"||method=="Gower-Leg"||method=="Gower-Le"||method=="Gower-L"||method=="Gower-"||method=="Gower"||method=="Gowe"||method=="Gow"||method=="GL"||method == "gower-legendre"||method=="gower-legendr"||method=="gower-legend"||method=="gower-legen"||method=="gower-lege"||method=="gower-leg"||method=="gower-le"||method=="gower-l"||method=="gower-"||method=="gower"||method=="gowe"||method=="gow"||method=="gl"||method==12){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,1])/(0.5*(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[2,1])+table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,1]))
@@ -585,7 +585,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
      ######## The Gower & Legendre Distance ########
-      if(method == "gower-legendre"||method=="gower-legendr"||method=="gower-legend"||method=="gower-legen"||method=="gower-lege"||method=="gower-leg"||method=="gower-le"||method=="gower-l"||method=="gower-"||method=="gower"||method=="gowe"||method=="gow"||method=="gl"||method==12){
+      if(method == "Gower-Legendre"||method=="Gower-Legendr"||method=="Gower-Legend"||method=="Gower-Legen"||method=="Gower-Lege"||method=="Gower-Leg"||method=="Gower-Le"||method=="Gower-L"||method=="Gower-"||method=="Gower"||method=="Gowe"||method=="Gow"||method=="GL"||method == "gower-legendre"||method=="gower-legendr"||method=="gower-legend"||method=="gower-legen"||method=="gower-lege"||method=="gower-leg"||method=="gower-le"||method=="gower-l"||method=="gower-"||method=="gower"||method=="gowe"||method=="gow"||method=="gl"||method==12){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,1])/(0.5*(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[2,1])+table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,1]))
