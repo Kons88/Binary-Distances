@@ -181,7 +181,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Forbes II Distance ########
-      if(method == "forbes 2"||method=="forbes ii"||method=="f2"||method=="fii"||method=="f 2"||method=="f ii"||method==16){
+      if(method == "Forbes 2"||method == "Forbe 2"||method == "Forb 2"||method == "For 2"||method=="Forbes II"||method=="Forbe II"||method=="Forb II"||method=="For II"||method=="F2"||method=="FII"||method=="F 2"||method=="F II"||method == "forbes 2"||method == "forbe 2"||method == "forb 2"||method == "for 2"||method=="forbes ii"||method=="forbe ii"||method=="forb ii"||method=="for ii"||method=="f2"||method=="fii"||method=="f 2"||method=="f ii"||method==16){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-(((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1])*(table(m[,i],m[,j])[2,2])-((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])))/((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1])*(min((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]),(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2]))-(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2]))))
@@ -621,7 +621,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
      ######## The Forbes II Distance ########
-      if(method == "Forbes II"||method=="forbes II"||method=="f2"||method=="fii"||method==16){
+      if(method == "Forbes 2"||method == "Forbe 2"||method == "Forb 2"||method == "For 2"||method=="Forbes II"||method=="Forbe II"||method=="Forb II"||method=="For II"||method=="F2"||method=="FII"||method=="F 2"||method=="F II"||method == "forbes 2"||method == "forbe 2"||method == "forb 2"||method == "for 2"||method=="forbes ii"||method=="forbe ii"||method=="forb ii"||method=="for ii"||method=="f2"||method=="fii"||method=="f 2"||method=="f ii"||method==16){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-(((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,1])*(table(m[i,],m[j,])[2,2])-(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2]))/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,1])*(min((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]),(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2]))-(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2]))))
