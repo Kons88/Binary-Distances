@@ -217,7 +217,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The McConnaughey Distance ########
-      if(method == "McConnaughey"||method=="Mcconnaughey"||method=="mcconnaughey"||method=="mccon"||method==20){
+      if(method == "McConnaughey"||method == "McConnaughe"||method == "McConnaugh"||method == "McConnaug"||method == "McConnau"||method == "McConna"||method == "McConn"||method == "McCon"||method=="Mcconnaughey"||method=="Mcconnaughe"||method=="Mcconnaugh"||method=="Mcconnaug"||method=="Mcconnau"||method=="Mcconna"||method=="Mcconn"||method=="Mccon"||method=="mcconnaughey"||method=="mcconnaughe"||method=="mcconnaugh"||method=="mcconnaug"||method=="mcconnau"||method=="mcconna"||method=="mcconn"||method=="mccon"||method==20){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((((table(m[,i],m[,j])[2,2])^2)-(table(m[,i],m[,j])[2,1]*table(m[,i],m[,j])[1,2]))/((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])))
@@ -657,7 +657,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
      ######## The McConnaughey Distance ########
-      if(method == "McConnaughey"||method=="Mcconnaughey"||method=="mcconnaughey"||method=="mccon"||method==20){
+      if(method == "McConnaughey"||method == "McConnaughe"||method == "McConnaugh"||method == "McConnaug"||method == "McConnau"||method == "McConna"||method == "McConn"||method == "McCon"||method=="Mcconnaughey"||method=="Mcconnaughe"||method=="Mcconnaugh"||method=="Mcconnaug"||method=="Mcconnau"||method=="Mcconna"||method=="Mcconn"||method=="Mccon"||method=="mcconnaughey"||method=="mcconnaughe"||method=="mcconnaugh"||method=="mcconnaug"||method=="mcconnau"||method=="mcconna"||method=="mcconn"||method=="mccon"||method==20){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-((((table(m[i,],m[j,])[2,2])^2)-(table(m[i,],m[j,])[1,2]*table(m[i,],m[j,])[2,1]))/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2])))
@@ -675,7 +675,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
      ######## The Kulczynski I Distance ########
-      if(method == "Kulczynski I"||method=="kulczynski I"||method=="kul1"||method=="kuli"||method==22){
+      if(method == "kulczynski 1"||method=="kulczynski i"||method=="kul1"||method=="kuli"||method=="kul 1"||method=="kul i"||method==22){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-(table(m[i,],m[j,])[2,2]/(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[2,1]))
