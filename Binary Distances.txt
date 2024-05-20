@@ -271,7 +271,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Simpson (or Szymkiewicz-Simpson) Distance ########
-      if(method == "Simpson"||method=="simpson"||method=="Szymkiewicz-Simpson"||method=="szymkiewicz-simpson"||method==26){
+      if(method == "Simpson"||method=="Simpso"||method=="Simps"||method=="Simp"||method=="Szymkiewicz-Simpson"||method=="Szymkiewicz-Simpso"||method=="Szymkiewicz-Simps"||method=="Szymkiewicz-Simp"||method=="Szymkiewicz-Sim"||method=="Szymkiewicz-Si"||method=="Szymkiewicz-S"||method=="Szymkiewicz-"||method=="Szymkiewicz"||method=="Szymkiewic"||method=="Szymkiewi"||method=="Szymkiew"||method=="Szymkie"||method=="Szymki"||method == "simpson"||method=="simpso"||method=="simps"||method=="simp"||method=="szymkiewicz-simpson"||method=="szymkiewicz-simpso"||method=="szymkiewicz-simps"||method=="szymkiewicz-simp"||method=="szymkiewicz-sim"||method=="szymkiewicz-si"||method=="szymkiewicz-s"||method=="szymkiewicz-"||method=="szymkiewicz"||method=="szymkiewic"||method=="szymkiewi"||method=="szymkiew"||method=="szymkie"||method=="szymki"||method==26){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((table(m[,i],m[,j])[2,2])/(min((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]),(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2]))))
@@ -289,7 +289,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Fager & McGowan Distance ########
-      if(method == "Fager-Mcgowan"||method=="Fager-McGowan"||method==28){
+      if(method == "Fager-Mcgowan"||method=="Fager-McGowan"||method=="fager-mcgowan"||method==28){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-(((table(m[,i],m[,j])[2,2])/(sqrt((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2]))))-((max((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]),(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])))/(2)))
@@ -711,7 +711,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Simpson (or Szymkiewicz-Simpson) Distance ########
-      if(method == "Simpson"||method=="simpson"||method=="Szymkiewicz-Simpson"||method=="szymkiewicz-simpson"||method==26){
+      if(method == "Simpson"||method=="Simpso"||method=="Simps"||method=="Simp"||method=="Szymkiewicz-Simpson"||method=="Szymkiewicz-Simpso"||method=="Szymkiewicz-Simps"||method=="Szymkiewicz-Simp"||method=="Szymkiewicz-Sim"||method=="Szymkiewicz-Si"||method=="Szymkiewicz-S"||method=="Szymkiewicz-"||method=="Szymkiewicz"||method=="Szymkiewic"||method=="Szymkiewi"||method=="Szymkiew"||method=="Szymkie"||method=="Szymki"||method == "simpson"||method=="simpso"||method=="simps"||method=="simp"||method=="szymkiewicz-simpson"||method=="szymkiewicz-simpso"||method=="szymkiewicz-simps"||method=="szymkiewicz-simp"||method=="szymkiewicz-sim"||method=="szymkiewicz-si"||method=="szymkiewicz-s"||method=="szymkiewicz-"||method=="szymkiewicz"||method=="szymkiewic"||method=="szymkiewi"||method=="szymkiew"||method=="szymkie"||method=="szymki"||method==26){
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2])/(min((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]),(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2]))))
