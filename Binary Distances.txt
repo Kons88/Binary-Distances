@@ -253,7 +253,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Johnson Distance ########
-      if(method == "Johnson"||method=="johnson"||method==24){
+      if(method == "Johnson"||method == "Johnso"||method == "Johns"||method == "John"||method=="johnson"||method=="johnso"||method=="johns"||method=="john"||method==24){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-(((table(m[,i],m[,j])[2,2]/(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]))+(table(m[,i],m[,j])[2,2]/(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2]))))
@@ -693,7 +693,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Johnson Distance ########
-      if(method == "Johnson"||method=="johnson"||method==24){
+      if(method == "Johnson"||method == "Johnso"||method == "Johns"||method == "John"||method=="johnson"||method=="johnso"||method=="johns"||method=="john"||method==24){
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-(1/2*((table(m[i,],m[j,])[2,2]/(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]))+(table(m[i,],m[j,])[2,2]/(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2]))))
