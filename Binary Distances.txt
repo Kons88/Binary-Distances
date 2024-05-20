@@ -208,7 +208,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Mountford Distance ########
-      if(method == "Mountford"||method=="mountford"||method=="mount"||method==19){
+      if(method == "Mountford"||method=="Mountfor"||method=="Mountfo"||method=="Mountf"||method=="Mount"||method == "mountford"||method=="mountfor"||method=="mountfo"||method=="mountf"||method=="mount"||method==19){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-(table(m[,i],m[,j])[2,2]/(0.5*(table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,2])+table(m[,i],m[,j])[2,1]*table(m[,i],m[,j])[1,2]))
@@ -648,7 +648,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
       ######## The Mountford Distance ########
-       if(method == "Mountford"||method=="mountford"||method=="mount"||method==19){
+       if(method == "Mountford"||method=="Mountfor"||method=="Mountfo"||method=="Mountf"||method=="Mount"||method == "mountford"||method=="mountfor"||method=="mountfo"||method=="mountf"||method=="mount"||method==19){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-(table(m[i,],m[j,])[2,2]/(0.5*(table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,2])+table(m[i,],m[j,])[1,2]*table(m[i,],m[j,])[2,1]))
