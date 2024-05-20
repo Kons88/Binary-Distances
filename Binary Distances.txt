@@ -235,7 +235,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Kulczynski I Distance ########
-      if(method == "Kulczynski I"||method=="kulczynski I"||method=="kul1"||method=="kuli"||method==22){
+      if(method == "Kulczynski I"||method == "Kulczynsk I"||method == "Kulczyns I"||method == "Kulczyn I"||method == "Kulczy I"||method == "Kulcz I"||method == "Kulc I"||method=="Kulczynski 1"||method=="Kulczynsk 1"||method=="Kulczyns 1"||method=="Kulczyn 1"||method=="Kulczy 1"||method=="Kulcz 1"||method=="Kulc 1"||method=="Kul1"||method=="Kuli"||method=="Kul 1"||method=="Kul I"||method == "kulczynski i"||method == "kulczynsk i"||method == "kulczyns i"||method == "kulczyn i"||method == "kulczy i"||method == "kulcz i"||method == "kulc i"||method=="kulczynski 1"||method=="kulczynsk 1"||method=="kulczyns 1"||method=="kulczyn 1"||method=="kulczy 1"||method=="kulcz 1"||method=="kulc 1"||method=="kul1"||method=="kuli"||method=="kul 1"||method=="kul i"||method==22){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-(table(m[,i],m[,j])[2,2]/(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[2,1]))
@@ -244,7 +244,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Kulczynski II (or Driver & Kroeber) Distance ########
-      if(method == "Kulczynski II"||method=="Driver & Kroeber"||method=="driver & kroeber"||method=="d&k"||method=="D&K"||method=="kulczynski II"||method=="kul2"||method=="kulii"||method==23){
+      if(method == "Kulczynski II"||method=="Driver & Kroeber"||method=="driver & kroeber"||method=="dk"||method=="DK"||method=="kulczynski II"||method=="kul2"||method=="kulii"||method=="kul 2"||method=="kul ii"||method==23){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-(1/2*((table(m[,i],m[,j])[2,2]/(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]))+(table(m[,i],m[,j])[2,2]/(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2]))))
@@ -289,7 +289,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Fager & McGowan Distance ########
-      if(method == "Fager & McGowan"||method=="Fager-McGowan"||method=="FM"||method=="fm"||method==28){
+      if(method == "Fager-Mcgowan"||method=="Fager-McGowan"||method==28){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-(((table(m[,i],m[,j])[2,2])/(sqrt((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2]))))-((max((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]),(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])))/(2)))
@@ -675,7 +675,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
      ######## The Kulczynski I Distance ########
-      if(method == "kulczynski 1"||method=="kulczynski i"||method=="kul1"||method=="kuli"||method=="kul 1"||method=="kul i"||method==22){
+      if(method == "Kulczynski I"||method == "Kulczynsk I"||method == "Kulczyns I"||method == "Kulczyn I"||method == "Kulczy I"||method == "Kulcz I"||method == "Kulc I"||method=="Kulczynski 1"||method=="Kulczynsk 1"||method=="Kulczyns 1"||method=="Kulczyn 1"||method=="Kulczy 1"||method=="Kulcz 1"||method=="Kulc 1"||method=="Kul1"||method=="Kuli"||method=="Kul 1"||method=="Kul I"||method == "kulczynski i"||method == "kulczynsk i"||method == "kulczyns i"||method == "kulczyn i"||method == "kulczy i"||method == "kulcz i"||method == "kulc i"||method=="kulczynski 1"||method=="kulczynsk 1"||method=="kulczyns 1"||method=="kulczyn 1"||method=="kulczy 1"||method=="kulcz 1"||method=="kulc 1"||method=="kul1"||method=="kuli"||method=="kul 1"||method=="kul i"||method==22){
         for(i in 1:nrow(m)){
          for(j in 1:nrow(m)){
             dist.mat[i,j] <- 1-(table(m[i,],m[j,])[2,2]/(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[2,1]))
@@ -684,7 +684,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
        }
 
      ######## The Kulczynski II (or Driver & Kroeber) Distance ########
-      if(method == "Kulczynski II"||method=="Driver & Kroeber"||method=="driver & kroeber"||method=="d&k"||method=="D&K"||method=="kulczynski II"||method=="kul2"||method=="kulii"||method==23){
+      if(method == "Kulczynski II"||method=="Driver & Kroeber"||method=="driver & kroeber"||method=="dk"||method=="DK"||method=="kulczynski II"||method=="kul2"||method=="kulii"||method==23){
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-(1/2*((table(m[i,],m[j,])[2,2]/(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]))+(table(m[i,],m[j,])[2,2]/(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2]))))
