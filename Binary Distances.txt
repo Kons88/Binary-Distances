@@ -279,7 +279,8 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Braun-Blanquet Distance ########
-      if(method == "Braun-Blanquet"||method=="braun-blanquet"||method=="B-B"||method=="BB"||method==27){
+      if(method == "Braun-Blanquet"||method == "Braun-Blanque"||method == "Braun-Blanqu"||method == "Braun-Blanq"||method == "Braun-Blan"||method == "Braun-Bla"||method == "Braun-Bl"||method == "Braun-B"||method == "Braun-"||method == "Braun"||method=="Braun Blanquet"||method=="Braun Blanque"||method=="Braun Blanqu"||method=="Braun Blanq"||method=="Braun Blan"||method=="Braun Bla"||method=="Braun Bl"||method=="Braun B"||method=="B-B"||method=="BB"
+||method == "braun-blanquet"||method == "braun-blanque"||method == "braun-blanqu"||method == "braun-blanq"||method == "braun-blan"||method == "braun-bla"||method == "braun-bl"||method == "braun-b"||method == "braun-"||method == "braun"||method=="braun blanquet"||method=="braun blanque"||method=="braun blanqu"||method=="braun blanq"||method=="braun blan"||method=="braun bla"||method=="braun bl"||method=="braun b"||method=="b-b"||method=="bb"||method==27){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((table(m[,i],m[,j])[2,2])/(max((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]),(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2]))))
@@ -719,7 +720,8 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Braun-Blanquet Distance ########
-      if(method == "Braun-Blanquet"||method=="braun-blanquet"||method=="B-B"||method=="BB"||method==27){
+      if(method == "Braun-Blanquet"||method == "Braun-Blanque"||method == "Braun-Blanqu"||method == "Braun-Blanq"||method == "Braun-Blan"||method == "Braun-Bla"||method == "Braun-Bl"||method == "Braun-B"||method == "Braun-"||method == "Braun"||method=="Braun Blanquet"||method=="Braun Blanque"||method=="Braun Blanqu"||method=="Braun Blanq"||method=="Braun Blan"||method=="Braun Bla"||method=="Braun Bl"||method=="Braun B"||method=="B-B"||method=="BB"
+||method == "braun-blanquet"||method == "braun-blanque"||method == "braun-blanqu"||method == "braun-blanq"||method == "braun-blan"||method == "braun-bla"||method == "braun-bl"||method == "braun-b"||method == "braun-"||method == "braun"||method=="braun blanquet"||method=="braun blanque"||method=="braun blanqu"||method=="braun blanq"||method=="braun blan"||method=="braun bla"||method=="braun bl"||method=="braun b"||method=="b-b"||method=="bb"||method==27){
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2])/(max((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]),(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2]))))
