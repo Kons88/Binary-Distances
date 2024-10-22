@@ -389,7 +389,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Dispersion Distance ########
-      if(method == "Dispersion"||method=="Dispersio"||method=="Dispersi"||method=="Dispers"||method=="Disper"||method=="Dispe"||method=="Disp"||method=="dispersion"||method==39){
+      if(method == "Dispersion"||method=="Dispersio"||method=="Dispersi"||method=="Dispers"||method=="Disper"||method=="Dispe"||method=="Disp"||method=="dispersion"||method=="dispersio"||method=="dispersi"||method=="dispers"||method=="disper"||method=="dispe"||method=="disp"||method==39){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,1]-table(m[,i],m[,j])[2,1]*table(m[,i],m[,j])[1,2])/((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1])^2))
@@ -831,7 +831,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Dispersion Distance ########
-      if(method == "Dispersion"||method=="Dispersio"||method=="Dispersi"||method=="Dispers"||method=="Disper"||method=="Dispe"||method=="Disp"||method=="dispersion"||method==39){
+      if(method == "Dispersion"||method=="Dispersio"||method=="Dispersi"||method=="Dispers"||method=="Disper"||method=="Dispe"||method=="Disp"||method=="dispersion"||method=="dispersio"||method=="dispersi"||method=="dispers"||method=="disper"||method=="dispe"||method=="disp"||method==39){
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]*table(m[i,],m[j,])[1,2])/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1])^2))
