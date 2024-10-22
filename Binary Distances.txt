@@ -362,7 +362,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Stiles Distance ########
-      if(method == "Stiles"||method=="Stile"||method=="Stil"||method=="stiles"||method==36){
+      if(method == "Stiles"||method=="Stile"||method=="Stil"||method=="stiles"||method=="stile"||method=="stil"||method==36){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-(log10(((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1])*((abs(table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,1]-table(m[,i],m[,j])[2,1]*table(m[,i],m[,j])[1,2])-((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1])/2))^2))/((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])+(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])+(table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,1])+(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1]))))
@@ -804,7 +804,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Stiles Distance ########
-      if(method == "Stiles"||method=="Stile"||method=="Stil"||method=="stiles"||method==36){
+      if(method == "Stiles"||method=="Stile"||method=="Stil"||method=="stiles"||method=="stile"||method=="stil"||method==36){
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-(log10(((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1])*((abs(table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]*table(m[i,],m[j,])[1,2])-((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1])/2))^2))/((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])+(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2])+(table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,1])+(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1]))))
