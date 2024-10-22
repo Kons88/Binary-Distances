@@ -407,7 +407,8 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The McEwen & Michael Distance ########
-      if(method == "McEwen-Michael"||method=="McEwen-Michae"||method=="Michael-McEwen"||method=="michael-mcewen"||method=="mcewen-michael"||method==41){
+      if(method=="Mcewen-Michael"||method=="Mcewen-Michae"||method=="Mcewen-Micha"||method=="Mcewen-Mich"||method=="Mcewen-Mic"||method=="Mcewen-Mi"||method=="Mcewen-M"||method=="Mcewen-"||method=="Mcewen"||method=="McEwen-Michael"||method=="McEwen-Michae"||method=="McEwen-Micha"||method=="McEwen-Mich"||method=="McEwen-Mic"||method=="McEwen-Mi"||method=="McEwen-M"||method=="McEwen-"||method=="McEwen"
+||method=="mcewen-michael"||method=="mcewen-michae"||method=="mcewen-micha"||method=="mcewen-mich"||method=="mcewen-mic"||method=="mcewen-mi"||method=="mcewen-m"||method=="mcewen-"||method=="mcewen"||method==41){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((4*(table(m[,i],m[,j])[2,2]*table(m[,i],m[,j])[1,1]-table(m[,i],m[,j])[2,1]*table(m[,i],m[,j])[1,2]))/(((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,1])^2)+((table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,2])^2)))
@@ -849,7 +850,8 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The McEwen & Michael Distance ########
-      if(method == "McEwen-Michael"||method=="McEwen-Michae"||method=="Michael-McEwen"||method=="michael-mcewen"||method=="mcewen-michael"||method==41){
+      if(method=="Mcewen-Michael"||method=="Mcewen-Michae"||method=="Mcewen-Micha"||method=="Mcewen-Mich"||method=="Mcewen-Mic"||method=="Mcewen-Mi"||method=="Mcewen-M"||method=="Mcewen-"||method=="Mcewen"||method=="McEwen-Michael"||method=="McEwen-Michae"||method=="McEwen-Micha"||method=="McEwen-Mich"||method=="McEwen-Mic"||method=="McEwen-Mi"||method=="McEwen-M"||method=="McEwen-"||method=="McEwen"
+||method=="mcewen-michael"||method=="mcewen-michae"||method=="mcewen-micha"||method=="mcewen-mich"||method=="mcewen-mic"||method=="mcewen-mi"||method=="mcewen-m"||method=="mcewen-"||method=="mcewen"||method==41){
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-((4*(table(m[i,],m[j,])[2,2]*table(m[i,],m[j,])[1,1]-table(m[i,],m[j,])[2,1]*table(m[i,],m[j,])[1,2]))/(((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,1])^2)+((table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,2])^2)))
