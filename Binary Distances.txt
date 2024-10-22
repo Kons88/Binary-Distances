@@ -289,7 +289,8 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Fager & McGowan Distance ########
-      if(method == "Fager-Mcgowan"||method=="Fager-McGowan"||method=="fager-mcgowan"||method==28){
+      if(method == "Fager-Mcgowan"||method == "Fager-McGowan"||method == "Fager-Mcgowa"||method == "Fager-McGowa"||method == "Fager-McGow"||method == "Fager-McGo"||method == "Fager-McG"||method == "Fager-Mcgow"||method == "Fager-Mcgo"||method == "Fager-Mcg"||method == "Fager-Mc"||method == "Fager-M"||method == "Fager-"||method == "Fager"||method=="Fager Mcgowan"||method=="Fager McGowan"||method=="Fager Mcgowa"||method=="Fager Mcgow"||method=="Fager Mcgo"||method=="Fager Mcg"||method=="Fager Mc"||method=="Fager M"||method=="F-M"||method=="FM"
+||method == "Fager-Mcgowan"||method=="Fager-McGowan"||method=="fager-mcgowan"||method=="fager-mcgowa"||method=="fager-mcgow"||method=="fager-mcgo"||method=="fager-mcgo"||method=="fager-mcg"||method=="fager-mc"||method=="fager-m"||method=="fager-"||method=="fager"||method==28){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-(((table(m[,i],m[,j])[2,2])/(sqrt((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2]))))-((max((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1]),(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])))/(2)))
@@ -730,7 +731,8 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Fager & McGowan Distance ########
-      if(method == "Fager & McGowan"||method=="Fager-McGowan"||method=="FM"||method=="fm"||method==28){
+      if(method == "Fager-Mcgowan"||method == "Fager-McGowan"||method == "Fager-Mcgowa"||method == "Fager-McGowa"||method == "Fager-McGow"||method == "Fager-McGo"||method == "Fager-McG"||method == "Fager-Mcgow"||method == "Fager-Mcgo"||method == "Fager-Mcg"||method == "Fager-Mc"||method == "Fager-M"||method == "Fager-"||method == "Fager"||method=="Fager Mcgowan"||method=="Fager McGowan"||method=="Fager Mcgowa"||method=="Fager Mcgow"||method=="Fager Mcgo"||method=="Fager Mcg"||method=="Fager Mc"||method=="Fager M"||method=="F-M"||method=="FM"
+||method == "Fager-Mcgowan"||method=="Fager-McGowan"||method=="fager-mcgowan"||method=="fager-mcgowa"||method=="fager-mcgow"||method=="fager-mcgo"||method=="fager-mcgo"||method=="fager-mcg"||method=="fager-mc"||method=="fager-m"||method=="fager-"||method=="fager"||method==28){
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-(((table(m[i,],m[j,])[2,2])/(sqrt((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2]))))-((max((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1]),(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2])))/(2)))
