@@ -299,7 +299,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Gower Distance ########
-      if(method == "Gower"||method=="gower"||method=="gowe"||method=="gow"||method==29){
+      if(method == "Gower"||method == "Gowe"||method == "Gow"||method=="gower"||method=="gowe"||method=="gow"||method==29){
        for(i in 1:ncol(m)){
         for(j in 1:ncol(m)){
            dist.mat[i,j] <- 1-((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,1])/(sqrt((table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[2,1])*(table(m[,i],m[,j])[2,2]+table(m[,i],m[,j])[1,2])*(table(m[,i],m[,j])[2,1]+table(m[,i],m[,j])[1,1])*(table(m[,i],m[,j])[1,2]+table(m[,i],m[,j])[1,1]))))
@@ -741,7 +741,7 @@ binary.dist <- function(m, method = "jaccard", row.dist = FALSE, diag = FALSE, u
       }
 
      ######## The Gower Distance ########
-      if(method == "Gower"||method=="gower"||method=="gowe"||method=="gow"||method==29){
+      if(method == "Gower"||method == "Gowe"||method == "Gow"||method=="gower"||method=="gowe"||method=="gow"||method==29){
        for(i in 1:nrow(m)){
         for(j in 1:nrow(m)){
            dist.mat[i,j] <- 1-((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,1])/(sqrt((table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[2,1])*(table(m[i,],m[j,])[2,2]+table(m[i,],m[j,])[1,2])*(table(m[i,],m[j,])[2,1]+table(m[i,],m[j,])[1,1])*(table(m[i,],m[j,])[1,2]+table(m[i,],m[j,])[1,1]))))
